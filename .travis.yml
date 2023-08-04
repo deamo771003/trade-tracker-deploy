@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - "14"
+
+services:
+  # - docker
+
+# 設定參數(Travis CI 會按照參數分別執行)
+# env:
+
+# 在 install 前執行的指令
+before_install:
+  - npm install
+  # - npm ci
+  # - npm install -g render-cli
+  # - docker-compose up --build -d
+
+# 在執行測試之前的指令
+# before_script:
+script:
+  - npm test
+
+# deploy:
+#   provider: script
+#   script: npx render-cli deploy --auto-approve
+#   on:
+#     branch: main
